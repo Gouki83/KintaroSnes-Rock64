@@ -15,6 +15,8 @@ INSTRUCTIONS HOW TO USE
 
 First make sure you have read and met the two items listed under PRE-REQS.
 
-The current folder structure in this repo is setup to be directly downable into RECALBOX. If you are using recalbox, just download and merge the two files into the folders they are already in and reboot!
+The current folder structure in this repo is setup to be directly downable into RECALBOX (But you can use these with any Linux OS, keep reading)
+RECALBOX for the ROCK64 can be found here: https://github.com/mrfixit2001/recalbox_rock64/releases
+If you are using recalbox, just download and merge the two files into the folders they are already in and reboot!
 
 With a slight modification, these scripts can be used in any Linux OS, however, it does NOT need to be recalbox. The file "S100kintaro" needs to run at boot, so put that bash script somewhere that it will run when your ROCK64 is powered on. You will then need to update line 7 to point to the folder that you have choosen to put kintaro-case.py in. (Don't forget the R64-GPIO in that folder! - read the pre-reqs)
