@@ -1,0 +1,20 @@
+#! /bin/sh
+ 
+case "$1" in
+  start)
+    echo "Starting Kintaro-Case-Monitor"
+    # run application you want to start
+    python /recalbox/scripts/kintaro-case.py &
+    ;;
+  stop)
+    echo "Stopping Kintaro-Case-Monitor"
+    # kill application you want to stop
+    kill $(ps aux | grep kintaro-case.py | awk '{ print $1 }')
+    ;;
+  *)
+    echo "Usage: /etc/init.d/S100kintaro{start|stop}"
+    exit 1
+    ;;
+esac
+ 
+exit 0
