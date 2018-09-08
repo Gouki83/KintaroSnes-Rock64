@@ -54,5 +54,6 @@ if(BLINK == True):
 		GPIO.output(LED, GPIO.LOW)
 		time.sleep(0.2)
 		GPIO.output(LED, GPIO.HIGH)
+		time.sleep(0.2)
 
 GPIO.cleanup()
