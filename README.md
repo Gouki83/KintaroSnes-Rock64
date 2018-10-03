@@ -15,8 +15,14 @@ INSTRUCTIONS HOW TO USE
 
 First make sure you have read and met the two items listed under PRE-REQS.
 
-The current folder structure in this repo is setup to be directly downable into RECALBOX (But you can use these with any Linux OS, keep reading)
+The current folder structure in this repo is setup to be directly downloadable into RECALBOX (But you can use these with any Linux OS, keep reading)
 RECALBOX for the ROCK64 can be found here: https://github.com/mrfixit2001/recalbox_rock64/releases
 If you are using recalbox, just download and merge the two files into the folders they are already in and reboot!
 
-With a slight modification, these scripts can be used in any Linux OS, however, it does NOT need to be recalbox. The file "S100kintaro" needs to run at boot, so put that bash script somewhere that it will run when your ROCK64 is powered on. You will then need to update line 7 to point to the folder that you have choosen to put kintaro-case.py in. (Don't forget the R64-GPIO in that folder! - read the pre-reqs)
+These scripts can be used in any Linux OS, it does NOT need to be recalbox. There's a number of different ways to run a program when Linux boots up. This repo uses the file "S100kintaro" as an init.d bash script which runs at boot, but you don't need to use init.d, you can use systemd as well. 
+
+If you want to use the included S100kintaro init.d script, put this in /etc/init.d and enable it to start when your ROCK64 is powered on. You will then need to update line 7 to point to the folder that you have choosen to put kintaro-case.py in. 
+
+If you want to use systemd, just make a new service file in /etc/systemd/system, set it's Execstart to the location of where you've saved kintaro-case.py, and enable your new systemd service.
+
+***Don't forget the R64-GPIO in the same folder as kintaro-case.py (or embed it in your python folder) - read the pre-reqs***
