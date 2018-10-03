@@ -27,33 +27,27 @@ if(GPIO.input(POWER) == "0"):
 # Turn on LED
 GPIO.output(LED, GPIO.HIGH)
 
-BLINK = False
-
 # Monitor for Inputs
 while True:
 	if(GPIO.input(PCB) == "0"):
 		if(GPIO.input(RESET) == "0"):
 			print("Rebooting...")
-			BLINK = True
+			GPIO.output(LED, GPIO.LOW)
+			time.sleep(0.2)
+			GPIO.output(LED, GPIO.HIGH)
 			os.system("reboot")
 			break
 		if(GPIO.input(POWER) == "1" and IGNORE_PWR_OFF == True):
 			IGNORE_PWR_OFF = False
 		if(GPIO.input(POWER) == "0" and IGNORE_PWR_OFF == False):
 			print("Shutting down...")
-			BLINK = True
+			GPIO.output(LED, GPIO.LOW)
+			time.sleep(0.2)
+			GPIO.output(LED, GPIO.HIGH)
 			os.system("shutdown -h now")
 			break
 	else:
 		break
 	time.sleep(0.3)
-
-# Cleanup
-if(BLINK == True):
-	while True:
-		GPIO.output(LED, GPIO.LOW)
-		time.sleep(0.2)
-		GPIO.output(LED, GPIO.HIGH)
-		time.sleep(0.2)
 
 GPIO.cleanup()
