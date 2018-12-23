@@ -14,6 +14,9 @@ RESET = 3
 POWER = 5
 LED = 7
 
+# Tell the script if this is running on a ROCK64 or ROCKPRO64
+GPIO.setrock("ROCK64")
+
 # Setup 
 GPIO.setup(PCB, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(RESET, GPIO.IN, pull_up_down=GPIO.PUD_UP)
