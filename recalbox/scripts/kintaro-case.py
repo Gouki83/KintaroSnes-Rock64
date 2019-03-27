@@ -43,12 +43,19 @@ while True:
 		if(GPIO.input(POWER) == "1" and IGNORE_PWR_OFF == True):
 			IGNORE_PWR_OFF = False
 		if(GPIO.input(POWER) == "0" and IGNORE_PWR_OFF == False):
-			print("Shutting down...")
-			GPIO.output(LED, GPIO.LOW)
-			time.sleep(0.2)
-			GPIO.output(LED, GPIO.HIGH)
-			os.system("shutdown -h now")
-			break
+			if(''.join(filter(lambda c: c in string.printable, subprocess.check_output("cat /sys/firmware/devicetree/base/rockchip-suspend/status", shell=True).strip())).lower() == "okay"):
+				print("Suspending...")
+				GPIO.output(LED, GPIO.LOW)
+				os.system("ifconfig eth0 down")
+				os.system("echo mem > /sys/power/state")
+				time.sleep(1)
+				os.system("ifconfig eth0 up")
+				GPIO.output(LED, GPIO.HIGH)
+			else:
+				print("Shutting down...")
+				BLINK = True
+				os.system("shutdown -h now")
+				break
 	else:
 		break
 	time.sleep(0.3)
