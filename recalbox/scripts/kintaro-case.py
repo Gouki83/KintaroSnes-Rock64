@@ -3,6 +3,8 @@
 
 import time
 import os
+import subprocess
+import string
 import R64.GPIO as GPIO
 # NOTE: the R64GPIO package doesn't support "add_event_detect", so we can't use callbacks
 
