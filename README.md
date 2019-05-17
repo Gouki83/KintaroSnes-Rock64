@@ -1,8 +1,11 @@
-This repository contains two simple files that will enable the LED and buttons on the Kintaro SNES case for the Pine64 ROCK64 Board
+This repository contains two simple files that will enable the LED, FAN, and Power/Reset buttons on the:
+- Kintaro SNES case with Pine64 ROCK64 Board
+- ROSHAMBO Super Famicom case for the Pine64 ROCK64 and ROCKPRO64 Boards
 
-Here is information about the Kintaro SNES Case (Meant for a RPI): https://www.kintaro.co/products/super-kintaro-kuma-system
-
-Here is information about the Rock64: https://www.pine64.org/?page_id=7147
+Here is information about the Kintaro SNES Case (Meant for a RPI, works for Rock64!): https://www.kintaro.co/products/super-kintaro-kuma-system
+Here is information about the Roshambo Super Famicom case: https://www.cloudmedia.com/?product=roshambo-retro-gaming-case
+Here is information about the Rock64: https://www.pine64.org/rock64/
+Here is information about the RockPro64: https://www.pine64.org/rockpro64/
 
 PRE-REQS
 
@@ -16,8 +19,12 @@ INSTRUCTIONS HOW TO USE
 First make sure you have read and met the two items listed under PRE-REQS.
 
 The current folder structure in this repo is setup to be directly downloadable into RECALBOX (But you can use these with any Linux OS, keep reading)
+
+MrFixIt's distrobutions of RECALBOX should already include these scripts out-of-the-box.
 RECALBOX for the ROCK64 can be found here: https://github.com/mrfixit2001/recalbox_rock64/releases
-If you are using recalbox, just download and merge the two files into the folders they are already in and reboot!
+RECALBOX for the ROCKPRO64 can be found here: https://github.com/mrfixit2001/recalbox_rockpro64/releases
+
+If you are using recalbox and these scripts are not there (or you want to update them), just download and merge the two files into the folders they are already in and reboot!
 
 These scripts can be used in any Linux OS, it does NOT need to be recalbox. There's a number of different ways to run a program when Linux boots up. This repo uses the file "S100kintaro" as an init.d bash script which runs at boot, but you don't need to use init.d, you can use systemd as well. 
 
