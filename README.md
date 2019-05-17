@@ -2,10 +2,11 @@ This repository contains two simple files that will enable the LED, FAN, and Pow
 - Kintaro SNES case with Pine64 ROCK64 Board
 - ROSHAMBO Super Famicom case for the Pine64 ROCK64 and ROCKPRO64 Boards
 
-Here is information about the Kintaro SNES Case (Meant for a RPI, works for Rock64!): https://www.kintaro.co/products/super-kintaro-kuma-system
-Here is information about the Roshambo Super Famicom case: https://www.cloudmedia.com/?product=roshambo-retro-gaming-case
-Here is information about the Rock64: https://www.pine64.org/rock64/
-Here is information about the RockPro64: https://www.pine64.org/rockpro64/
+More Information about the cases and boards:
+- Kintaro SNES Case (Meant for a RPI, works for Rock64!): https://www.kintaro.co/products/super-kintaro-kuma-system
+- Roshambo Super Famicom case: https://www.cloudmedia.com/?product=roshambo-retro-gaming-case
+- Rock64: https://www.pine64.org/rock64/
+- RockPro64: https://www.pine64.org/rockpro64/
 
 PRE-REQS
 
