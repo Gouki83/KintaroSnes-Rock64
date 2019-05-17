@@ -22,8 +22,8 @@ First make sure you have read and met the two items listed under PRE-REQS.
 The current folder structure in this repo is setup to be directly downloadable into RECALBOX (But you can use these with any Linux OS, keep reading)
 
 MrFixIt's distrobutions of RECALBOX should already include these scripts out-of-the-box.
-RECALBOX for the ROCK64 can be found here: https://github.com/mrfixit2001/recalbox_rock64/releases
-RECALBOX for the ROCKPRO64 can be found here: https://github.com/mrfixit2001/recalbox_rockpro64/releases
+- RECALBOX for the ROCK64 can be found here: https://github.com/mrfixit2001/recalbox_rock64/releases
+- RECALBOX for the ROCKPRO64 can be found here: https://github.com/mrfixit2001/recalbox_rockpro64/releases
 
 If you are using recalbox and these scripts are not there (or you want to update them), just download and merge the two files into the folders they are already in and reboot!
 
