@@ -17,7 +17,9 @@ PRE-REQS
 
 INSTRUCTIONS HOW TO USE
 
-First make sure you have read and met the two items listed under PRE-REQS.
+First, make sure you have read and met the two items listed under PRE-REQS.
+
+To use on ROCKPRO64 - after you've followed the below instructions, line 21 in kintaro-case.py needs to be set to ROCKPRO64 (default is ROCK64).
 
 The current folder structure in this repo is setup to be directly downloadable into RECALBOX (But you can use these with any Linux OS, keep reading)
 
